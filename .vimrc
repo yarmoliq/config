@@ -1,12 +1,18 @@
 syntax on
 
 set noerrorbells
+
 set number
-set incsearch
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set ruler
+
+set hlsearch                    " highlight search terms
+set incsearch                   " show search matches as you type
+
+set softtabstop=4 expandtab shiftwidth=4 smarttab
+set ai
 set smartindent
 set nowrap
+
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
