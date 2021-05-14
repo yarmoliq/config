@@ -17,6 +17,9 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
+set autoread
+
+set rtp+=~/fzf
 
 " set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -27,3 +30,6 @@ nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+xnoremap <leader>p "_dP
