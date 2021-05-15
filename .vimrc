@@ -2,7 +2,10 @@ syntax on
 
 set noerrorbells
 
-set number
+set relativenumber
+highlight LineNr ctermfg=grey
+set nu rnu
+
 " set hlsearch                    " highlight search terms
 set ruler
 
@@ -22,7 +25,7 @@ set autoread
 set rtp+=~/fzf
 
 " set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+" highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 execute "set <A-j>=\ej"
 execute "set <A-k>=\ek"
