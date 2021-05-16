@@ -22,7 +22,7 @@ set undodir=~/.vim/undodir
 set undofile
 set autoread
 
-set rtp+=~/fzf
+set rtp+=~/.fzf
 
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -49,7 +49,8 @@ function! s:bufopen(e)
 endfunction
 
 nnoremap <silent> <Leader>f :call fzf#run({
-\   'down': '40%'})<CR>
+\   'down': '40%',
+\   'sink': 'edit'})<CR>
 
 
 nnoremap <silent> <Leader>s :call fzf#run({

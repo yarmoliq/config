@@ -103,7 +103,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias cdasia="cd /mnt/c/dev-itr/asiaxpat/asiaxpat"
 alias cddevper="cd /mnt/c/dev-personal"
-alias fd=fdfind
+alias fd="fdfind"
 
 shopt -s globstar
 
@@ -125,4 +125,11 @@ if ! shopt -oq posix; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_DEFAULT_OPTS="--extended"
+export FZF_DEFAULT_OPTS="--extended --border"
+
+# Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git'
+
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
