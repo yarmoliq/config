@@ -1,5 +1,9 @@
 syntax on
 
+if &diff
+    colorscheme mycolorscheme
+endif
+
 set noerrorbells
 
 set relativenumber
@@ -21,6 +25,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set autoread
+set ignorecase
 
 set rtp+=~/.fzf
 

@@ -101,8 +101,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-alias cdasia="cd /mnt/c/dev-itr/asiaxpat/asiaxpat"
-alias cddevper="cd /mnt/c/dev-personal"
 alias fd="fdfind"
 
 shopt -s globstar
@@ -132,4 +130,3 @@ export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git'
 
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
