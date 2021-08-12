@@ -1,22 +1,19 @@
 syntax on
 
-if &diff
-    colorscheme mycolorscheme
-endif
-
 set noerrorbells
 
 set relativenumber
 highlight LineNr ctermfg=grey
 set nu rnu
 
-" set hlsearch                    " highlight search terms
-set ruler
+set hlsearch                    " highlight search terms
+set ruler                       " line and column numbers in the bottom right corner
 
 set incsearch                   " show search matches as you type
 
 set softtabstop=4 expandtab shiftwidth=4 smarttab
-set ai
+filetype indent on
+set ai      " also indentation thingy
 set smartindent
 set nowrap
 
@@ -24,13 +21,9 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
-set autoread
-set ignorecase
+set ignorecase      " or ic / noic
 
-set rtp+=~/.fzf
-
-" set colorcolumn=80
-" highlight ColorColumn ctermbg=0 guibg=lightgrey
+set rtp+=~/.fzf     " runtime path
 
 execute "set <A-j>=\ej"
 execute "set <A-k>=\ek"
@@ -38,9 +31,6 @@ nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
-nnoremap <leader>d "_d
-xnoremap <leader>d "_d
-xnoremap <leader>p "_dP
 
 function! s:buflist()
   redir => ls
@@ -56,7 +46,6 @@ endfunction
 nnoremap <silent> <Leader>f :call fzf#run({
 \   'down': '40%',
 \   'sink': 'edit'})<CR>
-
 
 nnoremap <silent> <Leader>s :call fzf#run({
 \   'down': '40%',
