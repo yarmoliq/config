@@ -1,14 +1,10 @@
 syntax on
 
-if &diff
-endif
-"colorscheme github
 colorscheme molokai
 
 set noerrorbells
 
 set relativenumber
-"highlight LineNr ctermfg=grey
 set nu rnu
 
 set hlsearch                    " highlight search terms
