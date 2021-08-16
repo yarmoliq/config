@@ -5,12 +5,12 @@ colorscheme molokai
 set noerrorbells
 
 set relativenumber
-set nu rnu
+set nu
+set scrolloff=8
 
-set hlsearch                    " highlight search terms
-set ruler                       " line and column numbers in the bottom right corner
-
+set nohlsearch                    " highlight search terms
 set incsearch                   " show search matches as you type
+set ruler                       " line and column numbers in the bottom right corner
 
 set softtabstop=4 expandtab shiftwidth=4 smarttab
 filetype indent on
