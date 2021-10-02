@@ -126,7 +126,19 @@ fi
 export FZF_DEFAULT_OPTS="--extended --border"
 
 # Setting fd as the default source for fzf
-export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND='fdfind --hidden --follow --exclude .git'
 
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+gch() {
+    git checkout "$(git branch | fzf| tr -d '[:space:]')"
+}
+
+# Avoid duplicates
+HISTCONTROL=ignoredups:erasedups
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
